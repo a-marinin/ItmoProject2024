@@ -11,7 +11,6 @@ def task_1():  # This is the 1st function
     print('The 4th variable "var_list" has ', type(var_list), 'format. And its current value is', var_list)
     print('The 5th variable "var_bool" has ', type(var_bool), 'format. And its current value is', var_bool)
 
-
     #return(var_int, var_float, var_str, var_list, var_bool) # Commit out to be able to print outside the function
 
 
