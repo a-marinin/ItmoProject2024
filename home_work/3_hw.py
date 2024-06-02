@@ -1,4 +1,5 @@
 import calendar
+from random import randint
 
 def get_greatest_number(number1: int, number2: int) -> int:
     print('The following numbers are passed to the function: ', number1, ' and ', number2)
@@ -35,5 +36,15 @@ def get_season_by_month_number(month_number: int) -> None:
     print()
 
 
-for month in range(12):
-    get_season_by_month_number(month)
+# for month in range(12):
+#     get_season_by_month_number(month)
+
+
+def three_random_numbers(num1: int, num2: int, num3: int) -> None:
+    print('The following numbers were generated: ', num1, ', ', num2, ' and ', num3)
+    if num1 > 10 and num2 > 10 and num3 > 10:
+        print('Yes. All of these numbers (', num1, num2, num3, ') are greater than 10.')
+    else:
+        print('No. Some of these numbers (', num1, num2, num3, ') are lower than 10.')
+
+three_random_numbers(randint(0, 99), randint(0, 99), randint(0, 99))
