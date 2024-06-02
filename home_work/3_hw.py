@@ -77,4 +77,17 @@ def find_positive_numbers(n1: int, n2: int, n3: int, n4: int, n5: int) -> None:
     print('And also you was lucky to catch', len(list_of_zeros), 'zeros', list_of_zeros)
 
 
-find_positive_numbers(randint(-99, 99), randint(-99, 99), randint(-99, 99), randint(-99, 99), 0)
+#find_positive_numbers(randint(-99, 99), randint(-99, 99), randint(-99, 99), randint(-99, 99), 0)
+
+
+def count_days(year: int, month: int) -> None:
+    print('You entered', year, 'years and', month, 'months.')
+    days_in_years = year * 12 * 29
+    days_in_months = month * 29
+    # print(days_in_years, days_in_months)
+    total_days = days_in_years + days_in_months
+    print("It's ", total_days, 'days ***')
+    print('*** If we assume that there are 29 days in a month.')
+
+
+count_days(2, 3)
