@@ -9,7 +9,7 @@ def get_greatest_number(number1: int, number2: int) -> int:
     print('The greates number is ', greatest_number, ' (because ', greatest_number, '>', smallest_number, ').')
     return greatest_number
 
-# get_greatest_number(-9, 2) # Call the 1st task's function
+get_greatest_number(-9, 2) # Call the 1st task's function
 
 
 def compare_2_numbers(number1: int, number2: int) -> None:
@@ -21,8 +21,8 @@ def compare_2_numbers(number1: int, number2: int) -> None:
     if difference != 135:
         print('No. the difference between these numbers doesn\'t equals 135.')
 
-# compare_2_numbers(77, 99)  # Result: No
-# compare_2_numbers(-1, 134) # Result: Yes
+compare_2_numbers(77, 99)  # Result: No
+compare_2_numbers(-1, 134) # Result: Yes
 
 
 def get_season_by_month_number(month_number: int) -> None:
@@ -38,8 +38,8 @@ def get_season_by_month_number(month_number: int) -> None:
     print()
 
 
-# for month in range(12):
-#     get_season_by_month_number(month)
+for month in range(12):
+    get_season_by_month_number(month)
 
 
 def three_random_numbers(num1: int, num2: int, num3: int) -> None:
@@ -50,7 +50,7 @@ def three_random_numbers(num1: int, num2: int, num3: int) -> None:
         print('No. Some of these numbers (', num1, num2, num3, ') are lower than 10.')
 
 
-# three_random_numbers(randint(0, 99), randint(0, 99), randint(0, 99))
+three_random_numbers(randint(0, 99), randint(0, 99), randint(0, 99))
 
 
 def find_positive_numbers(n1: int, n2: int, n3: int, n4: int, n5: int) -> None:
@@ -77,7 +77,7 @@ def find_positive_numbers(n1: int, n2: int, n3: int, n4: int, n5: int) -> None:
     print('And also you was lucky to catch', len(list_of_zeros), 'zeros', list_of_zeros)
 
 
-#find_positive_numbers(randint(-99, 99), randint(-99, 99), randint(-99, 99), randint(-99, 99), 0)
+find_positive_numbers(randint(-99, 99), randint(-99, 99), randint(-99, 99), randint(-99, 99), 0)
 
 
 def count_days(year: int, month: int) -> None:
