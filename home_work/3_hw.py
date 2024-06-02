@@ -1,6 +1,7 @@
 import calendar
 from random import randint
 
+
 def get_greatest_number(number1: int, number2: int) -> int:
     print('The following numbers are passed to the function: ', number1, ' and ', number2)
     greatest_number = max(number1, number2)
@@ -9,6 +10,7 @@ def get_greatest_number(number1: int, number2: int) -> int:
     return greatest_number
 
 # get_greatest_number(-9, 2) # Call the 1st task's function
+
 
 def compare_2_numbers(number1: int, number2: int) -> None:
     # difference between the two numbers
@@ -47,4 +49,32 @@ def three_random_numbers(num1: int, num2: int, num3: int) -> None:
     else:
         print('No. Some of these numbers (', num1, num2, num3, ') are lower than 10.')
 
-three_random_numbers(randint(0, 99), randint(0, 99), randint(0, 99))
+
+# three_random_numbers(randint(0, 99), randint(0, 99), randint(0, 99))
+
+
+def find_positive_numbers(n1: int, n2: int, n3: int, n4: int, n5: int) -> None:
+    print('The following numbers were generated: ', n1, n2, n3, n4, ' and ', n5)
+    list_of_numbers = [n1, n2, n3, n4, n5]  # The list of all generated numbers
+    list_of_positive_numbers = []  # An empty list to catch the positive numbers
+    list_of_negative_numbers = []  # An empty list to catch the negative numbers
+    list_of_zeros = []  # An empty list to catch Zeros (just in case
+
+    for i in range(len(list_of_numbers)):
+        if list_of_numbers[i] > 0:
+            # print(list_of_numbers[i], ' is a positive number.')
+            list_of_positive_numbers.append(list_of_numbers[i])  # Append all positive numbers
+        elif list_of_numbers[i] == 0:
+            # print(list_of_numbers[i], "It's a Zero!")
+            list_of_zeros.append(list_of_numbers[i])  # Append zeros
+        else:
+            # print(list_of_numbers[i], ' is a negative number.')
+            list_of_negative_numbers.append((list_of_numbers[i]))  # Append all negative numbers
+
+    print('Statistic of your numbers:')
+    print(len(list_of_positive_numbers), ' numbers were positive:', list_of_positive_numbers)
+    print(len(list_of_negative_numbers), ' numbers were negative:', list_of_negative_numbers)
+    print('And also you was lucky to catch', len(list_of_zeros), 'zeros', list_of_zeros)
+
+
+find_positive_numbers(randint(-99, 99), randint(-99, 99), randint(-99, 99), randint(-99, 99), 0)
