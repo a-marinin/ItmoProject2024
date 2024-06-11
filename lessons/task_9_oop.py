@@ -17,3 +17,21 @@ print('\n')
 
 print(catalog_msk.text)
 print('Кнопка ' + catalog_msk.text + ' имеет ссылку ' + catalog_msk.link)
+
+
+class ButtonTwo:
+
+
+    def __init__(self, text, link, loc):
+        self.text = text
+        self.link = link
+        self.loc = loc
+
+    def click(self):
+        return "Клик по локатору - {}".format(self.loc)
+
+# Создаём экземпляр класса
+home_two = ButtonTwo('Домой', '/home', 'button#home')
+
+# Вызываем метод
+print(home_two.click())
