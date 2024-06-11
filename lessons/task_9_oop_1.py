@@ -6,15 +6,15 @@
 3. Выведите в консоль значение аргумента Loc, объекта search
 '''
 
-class Input:
-
-    def __init__(self, loc):
-        self.loc = loc
-
-
-search = Input('input#search')
-
-print(search.loc)
+# class Input:
+#
+#     def __init__(self, loc):
+#         self.loc = loc
+#
+#
+# search = Input('input#search')
+#
+# print(search.loc)
 
 
 '''
@@ -29,4 +29,42 @@ print(search.loc)
 5. Выведите в консоль text и loc каждого класса
 '''
 
-# TODO Решить задачу №1
+
+
+class Input:
+
+    def __init__(self, loc, text):
+        self.loc = loc
+        self.text = text
+
+
+class Button:
+
+    def __init__(self, loc, text):
+        self.loc = loc
+        self.text = text
+
+
+class Title:
+
+    def __init__(self, loc, text):
+        self.loc = loc
+        self.text = text
+
+
+class Link:
+
+    def __init__(self, loc, text):
+        self.loc = loc
+        self.text = text
+
+
+search = Input(loc='input#search', text='Поле поиска')
+button = Button(loc='location#button', text='Текст кнопки')
+title = Title(loc='test#test', text='Текст залоговка')
+link = Link(loc='link#link', text='URL ссылки')
+
+print(search.loc, search.text)
+print(button.loc, button.text)
+print(title.loc, title.loc)
+print(link.loc, link.loc)
