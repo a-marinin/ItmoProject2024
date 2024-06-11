@@ -1,19 +1,6 @@
-'''
-Задача - Создайте Базовый Класс
-1. В каталоге pages создайте файл base_page.py
-2. В Файле создайте класс BasePage.
-3. При инициализации у класса есть 2 атрибута:
-- driver - принимается в качестве аргумента
-- base_url - не принимается, уставновлено значение по-умолчанию (https://demoqa.com/)
-4. Создайте метод visit который возвращает переход на страницу (.get())
-5. Создайте метод find_element:
-- Метод принимает аргумент locator
-- Метод возвращает поиск элемента (.find_elemnent())
-6. Также необходимо добавить импорт  from selenium.webdriver.common.by import By
-'''
-
 from selenium.webdriver.common.by import By
 import time
+
 class BasePage:
 
     def __init__(self, driver):

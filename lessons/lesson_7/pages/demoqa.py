@@ -1,18 +1,6 @@
-'''
-Задача - Создайте Класс страницы
-1. В каталоге pages создайте файл demoqa.py
-2. В файле создайте класс DemoQa:
-- Класс DemoQA пока не имеет атрибутов, конструктор не требуется
-3. Наследуйте класс DemoQa от класса BasePage
-(при импорте не забудьте указать путь вместе с каталогом pages.base_page)
-4. Создайте метод exit_icon:
-- Метод вызывает метод find_element родительского класса и передаёт в него локатор locator='#app > header > a'
-5. Для красоты кода воспользуйтесь конструкцией try except
-6. Исключения надо импортировать 'NoSuchElementException'
-'''
-
 from selenium.common.exceptions import NoSuchElementException
 from lessons.lesson_6.pages.base_page import BasePage
+
 
 class DemoQa(BasePage):
 
