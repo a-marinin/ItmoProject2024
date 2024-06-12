@@ -7,5 +7,5 @@ def test_go_to_page_elements(browser):
 
     demo_qa_page.visit()
     assert demo_qa_page.equal_url()
-    demo_qa_page.click_on_the_btn()
+    demo_qa_page.btn_elements.click()
     assert elements_page.equal_url()
