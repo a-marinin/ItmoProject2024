@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
-
 """
 В файл components.py вынесены однотипные действия с веб-элементами.
 Класс WebElement не наследуется!
@@ -14,6 +13,8 @@ from selenium.common.exceptions import NoSuchElementException
     3. Метод exist - Метод, выполняющий проверку на то, найден ли веб-элемент на странице или нет:
         Если веб-элемент не найден - обрабатывается исключение "NoSuchElementException".
     4. Метод get-text - Метод для получения текста из веб-элемента.
+    5. Метод visible - Метод, выполняющий проверку на то, видин ли элемент.
+    6. Метод check_count_elements
 """
 
 
@@ -27,8 +28,12 @@ class WebElement:
         self.find_element().click()
 
     def find_element(self):
-        # Найти элемент.
+        # Найти один конкретный элемент по уникальному локатору.
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def find_elements(self):
+        # Найти несколько элементов по не уникальному локатору.
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
     def exist(self):
         # Проверка на то, существует ли элемент.
@@ -44,3 +49,11 @@ class WebElement:
 
     def visible(self):
         return self.find_element().is_displayed()
+
+    def check_count_elements(self, count: int) -> bool:
+        if len(self.find_elements()) == count:
+            return True
+        return False
+
+    def send_keys(self, text: str):
+        self.find_element().send_keys(text)
