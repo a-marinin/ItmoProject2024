@@ -1,5 +1,5 @@
-from pages.base_page import BasePage
-from components.components import WebElement
+from lessons.lesson_8.pages.base_page import BasePage
+from lessons.lesson_8.components.components import WebElement
 
 """
 В файле base_page.py создан класс DemoQa - это домашняя страница нашего сайта (demoqa.com).

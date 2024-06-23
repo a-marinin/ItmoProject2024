@@ -1,5 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
-from pages.base_page import BasePage
+from lessons.lesson_8.pages.base_page import BasePage
 
 """
 В файле swag_labs.py создан класс SwagLabs.

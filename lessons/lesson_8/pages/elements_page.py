@@ -1,5 +1,5 @@
-from pages.base_page import BasePage
-from components.components import WebElement
+from lessons.lesson_8.pages.base_page import BasePage
+from lessons.lesson_8.components.components import WebElement
 
 """
 В файле elements_page.py создан класс ElementsPage - это страница элементов нашего сайта (demoqa.com/elements).
@@ -16,3 +16,4 @@ class ElementsPage(BasePage):
         super().__init__(driver, self.base_url)
 
         self.text_center = WebElement(driver, '#app > div > div > div > div.col-12.mt-4.col-md-6')
+        self.text_elements = WebElement(driver, 'dib.col-12:nth-child(2)')
