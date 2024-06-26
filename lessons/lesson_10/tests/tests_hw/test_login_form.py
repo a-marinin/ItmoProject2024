@@ -14,8 +14,11 @@ def test_login_form(browser):
     form_page.user_email.send_keys('test@ttt.tt')
     form_page.gender_radio_1.click_force()
     form_page.user_number.send_keys('9999999999')
+    form_page.hobbies.click_force()
+    form_page.current_address.send_keys('test')
+
     time.sleep(2)
-    form_page.btn_submit.click_force()
+    form_page.btn_submit.click_force()  # Нажимаем на кнопку "Submit"
     time.sleep(2)
 
     # Проверка на модальное окно (на наличие modal_dialog)
