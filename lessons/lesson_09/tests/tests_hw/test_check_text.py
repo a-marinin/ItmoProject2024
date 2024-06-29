@@ -1,4 +1,4 @@
-from lessons.lesson_10.pages.demoqa import DemoQa
+from lessons.lesson_08.pages.demoqa import DemoQa
 from lessons.lesson_08.pages.elements_page import ElementsPage
 
 
