@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+import logging
 
 """
 В файл components.py вынесены однотипные действия с веб-элементами.
@@ -108,3 +109,10 @@ class WebElement:
         else:
             print("Locator type " + self.locator_type + " not correct.")
         return False  # Если ни одно из перечисленных выше условий не пройдёт
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert  # Возвращаем алерт, если он имеется
+        except Exception as ex:  # Обрабатываем исключение
+            logging.log(1, ex)
+            return False  # Если алерт не имеется

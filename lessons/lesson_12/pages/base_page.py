@@ -1,4 +1,5 @@
 import logging
+from lessons.lesson_12.components.components import WebElement
 
 """
 В файл base_page.py вынесены однотипные действия, которые мы можем совершать с web-страницей.
@@ -21,6 +22,7 @@ class BasePage:
     def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
+        self.viewport = WebElement(driver, 'head > meta')  # Создали для теста test_seo_meta.py
 
     def visit(self):
         # Метод, возвращающий переход на web-страницу.
